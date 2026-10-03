@@ -23,6 +23,6 @@ const apps = [
     version: "1.0.0",
     size: "APK",
     file: "apks/FoodMarket.apk",
-    icon: "logo.png"
+    icon: "assets/logo.png"
   }
 ];
