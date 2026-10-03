@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sigma Hacks Products - Download Android APK applications.">
+  <title>Sigma Hacks Products</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Sigma Hacks Products logo">
+      <div>
+        <h1>Sigma Hacks Products</h1>
+        <p>Android Apps &amp; APK Downloads</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge">APK STORE</span>
+      <h2>Download Our Products</h2>
+      <p>Choose an app below and download the APK directly.</p>
+    </section>
+
+    <section>
+      <div id="appList" class="app-list"></div>
+    </section>
+
+    <p class="note">
+      Only download and install APKs from sources you trust. Android may ask you to allow installation from unknown sources.
+    </p>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Sigma Hacks Products</p>
+  </footer>
+
+  <script src="apps.js"></script>
+  <script>
+    const list = document.getElementById("appList");
+
+    apps.forEach(app => {
+      const card = document.createElement("article");
+      card.className = "app-card";
+      card.innerHTML = `
+        <div class="app-icon-wrap">
+          <img src="${app.icon}" alt="${escapeHtml(app.name)} icon" class="app-icon">
+        </div>
+        <div class="app-info">
+          <h3>${escapeHtml(app.name)}</h3>
+          <p>${escapeHtml(app.description)}</p>
+          <div class="meta">
+            ${app.version ? `<span>Version ${escapeHtml(app.version)}</span>` : ""}
+            ${app.size ? `<span>${escapeHtml(app.size)}</span>` : ""}
+          </div>
+        </div>
+        <a class="download-btn" href="${app.file}" download>
+          <span>Download</span>
+          <span class="download-icon">↓</span>
+        </a>
+      `;
+      list.appendChild(card);
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+  </script>
+</body>
+</html>
