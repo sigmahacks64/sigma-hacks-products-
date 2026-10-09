@@ -20,7 +20,7 @@ const apps = [
   {
     name: "Food Market",
     description: "Food Market Android application",
-    version: "1.0.0",
+    version: "1.2.0",
     size: "APK",
     file: "apks/FoodMarket.apk",
     icon: "assets/logo6.png"
