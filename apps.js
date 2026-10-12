@@ -21,7 +21,7 @@ const apps = [
     name: "Food Market",
     description: "Food Market Android application",
     version: "1.2.0",
-    size: "APK",
+    size: "9 MB",
     file: "apks/FoodMarket.apk",
     icon: "assets/logo6.png"
   },
