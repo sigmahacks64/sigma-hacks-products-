@@ -24,5 +24,13 @@ const apps = [
     size: "APK",
     file: "apks/FoodMarket.apk",
     icon: "assets/logo6.png"
+  },
+  {
+    name: "GalaxyShooter",
+    description: "Glaxy Shooter Android Application",
+    version: "1.0.0",
+    size: "5.7 MB",
+    file: "apks/GalaxyShooter.apk", // यहाँ apks फोल्डर में अपलोड किए गए फाइल का सही नाम लिखें
+    icon: "assets/galaxy-shooter-logo.png"   // यहाँ assets फोल्डर में अपलोड किए गए आइकॉन का सही नाम लिखें
   }
 ];
